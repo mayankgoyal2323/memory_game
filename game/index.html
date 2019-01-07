@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Matching Game</title>
+  <meta name="description" content="Memory Game">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda|Monofett|Revalia">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Matching Game</h1>
+    </header>
+
+    <section class="score-panel">
+      <ul class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i id="star-two" class="fa fa-star"></i></li>
+        <li><i id="star-three" class="fa fa-star"></i></li>
+      </ul>
+
+      <span class="moves">0</span> Moves
+      <span id="display-timer">0 Hrs : 0 Mins : 0 Secs</span>
+
+      <div class="restart">
+        <i class="fa fa-repeat"></i>
+      </div>
+    </section>
+    <!-- generate the deck of cards dynamically -->
+    <ul class="deck">
+      <!-- The Progress Modal -->
+      <aside id="progress-modal" class="prog-modal">
+
+        <!-- Progress Modal dialogue -->
+        <section class="prog-dialogue">
+          <h5>Loading...</h5>
+          <div class="bar"></div>
+        </section>
+
+      </aside>
+    </ul>
+  </main>
+
+  <!-- The Modal -->
+  <aside id="congrats-dialogue" class="modal-box">
+
+    <!-- Modal content -->
+    <article class="modal-content">
+      <header class="modal-header">
+        <span class="close-button">x</span>
+        <h3>Congratulations, You Won!!</h3>
+      </header>
+      <section class="modal-body">
+        <h4>Game Stats</h4>
+        <table>
+          <tr>
+            <td class="stat">Moves:</td>
+            <td id="moves-placeholder"></td>
+          </tr>
+          <tr>
+            <td class="stat">Time:</td>
+            <td id="time-placeholder"></td>
+          </tr>
+          <tr>
+            <td class="stat">Star Rating:</td>
+            <td id="stars-placeholder"></td>
+          </tr>
+        </table>
+      </section>
+      <footer class="modal-footer">
+        <button id="modal-close-btn" class="modal-button">Close</button>
+        <button id="modal-play-again" class="modal-button">Play Again!</button>
+      </footer>
+    </article>
+
+  </aside>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
